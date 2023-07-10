@@ -75,6 +75,9 @@ h1 {
 }
 
 @media only screen and (max-device-width: 480px) {
+    .logo{
+        float: left;
+    }
     .opt1 , .opt2 {
         width: 40vh;
         left: 10%;
