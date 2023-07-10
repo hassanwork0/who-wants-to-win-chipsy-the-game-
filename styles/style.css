@@ -80,6 +80,9 @@ h1 {
         left: 10%;
     }
 
+    h1{
+        font-size: medium;
+    }
     
     .opt1{
         top: 35%;
