@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من سيربح كيس الشيبسي</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+        function res(){
+    if(window.localStorage.getItem("week1res"))
+    document.getElementById("week1res").innerHTML += window.localStorage.getItem("week1res");
+    else
+    document.getElementById("week2res").innerHTML += 0;
+
+    if(window.localStorage.getItem("week2res"))
+    document.getElementById("week2res").innerHTML += window.localStorage.getItem("week2res");
+    else
+    document.getElementById("week2res").innerHTML += 0;
+}
+    </script>
+</head>
+
+<body onload="res()">
+    <img src = "images/من سيربح كيس الشيبسي.png" class="logo">
+    <h1>اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
+
+<div class = "cont">
+
+        <a href="weeks/week 1.html"><img alt="button" class="opt1"></a>
+        <h1 class="opt1-t">اسئلة السطح الاول</h1>
+
+        <a href = "weeks/week 2.html"><img  alt="button" class="opt2"></a>
+        <h1 class="opt2-t">اسئلة السطح الثاني</h1>
+
+        <h1 class="week1res" id="week1res">درجتك في السطح الاول:</h1>
+    <h1 class="week2res" id="week2res">درجتك في السطح الثاني:</h1>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+html {
+    font-family: "Sakkal Majalla", "Simplified Arabic", "Traditional Arabic", "Arabic Typesetting", "Urdu Typesetting", "Droid Naskh", "Droid Kufi", "Roboto", "Tahoma", "Times New Roman", "Arial", serif;
+}
+
+body {
+    background-image: url("../images/background\ -\ Copy.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    color: whitesmoke;
+}
+
+.logo {
+    float: right;
+    width: 25%;
+}
+
+.hello {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.h1{
+    text-align: center;
+}
+
+.q ,.opt1 , .opt2 , .opt3 , .opt4{
+    position: absolute; 
+}
+
+.q {
+    top: 30%;
+    left: 22%;
+    width: 90vh;
+}
+
+.opt1{
+    top: 55%;
+    left: 15%;
+    width: 40vh;
+}
+
+.opt1-t{
+    top: 54%;
+    left: 20%;
+}
+
+.opt2{
+    top: 55%;
+    left: 50%;
+    width: 40vh;
+}
+
+.opt2-t{
+    top: 54%;
+    left: 55%;
+}
+
+.opt3{
+    top: 65%;
+    left: 15%;
+    width: 40vh;
+
+}
+
+.opt3-t{
+    top: 64%;
+    left: 18%;
+}
+
+.opt4{
+    top: 65%;
+    left: 50%;
+    width: 40vh;
+}
+
+.opt4-t{
+    top: 64%;
+    left: 55%;
+}
+
+
+ .q-t,.opt1-t , .opt2-t , .opt3-t , .opt4-t{
+    position: absolute;
+    content: '';
+    height: 1px;
+    padding: 1px;
+    pointer-events: none;
+}
+
+.opt1:hover , .opt2:hover , .opt3:hover , .opt4:hover {
+    cursor: pointer;
+    content: url("../images/million\ -\ hover.png");
+}
+
+.phone{
+    display: none;  
+}
+
+
+.q-t{
+    top: 33%;
+    left: 35%;
+    width: 80vh;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    display: none;
+    width: 400px;
+    background: rgb(34, 33, 33);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+}
+
+.pimg{
+    width: 300px;
+    margin-top: -150px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+
+    .monster{
+        display: inline-flex;
+        position: absolute;
+        left: 30%;
+    }
+@media only screen and (max-device-width: 480px) {
+
+    .q ,.opt1 , .opt2 , .opt3 , .opt4 {
+        width: 40vh;
+        left: 10%;
+    }
+
+    .q-t{
+        left: 17%;
+        font-size: 2vh;
+    }
+
+    .opt1-t , .opt2-t , .opt3-t , .opt4-t{
+        left: 30%;
+        font-size: 4vh;
+    }
+    
+    .q , .q-t{
+        top: 15%;
+    }
+    
+    .opt1{
+        top: 30%;
+    
+    }
+
+    .opt1-t{
+        top: 28%;
+    }
+    
+    .opt2{
+        top: 40%;
+
+    }
+    
+    .opt2-t{
+        top: 38%;
+    }
+    
+    .opt3{
+        top: 50%;
+    }
+    
+    .opt3-t{
+        top: 48%;
+    }
+    
+    .opt4{
+        top: 60%;
+    }
+    
+    .opt4-t{
+        top: 58%;
+    }
+    
+
+    .logo{
+        float: left;
+    }
+
+    .hello{
+        position: relative;
+        display: none;
+    }
+
+    }

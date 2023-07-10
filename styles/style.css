@@ -1,0 +1,115 @@
+html {
+    font-family: "Sakkal Majalla", "Simplified Arabic", "Traditional Arabic", "Arabic Typesetting", "Urdu Typesetting", "Droid Naskh", "Droid Kufi", "Roboto", "Tahoma", "Times New Roman", "Arial", serif;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    color: whitesmoke;
+}
+
+.logo {
+    float: right;
+    width: 25%;
+}
+
+h1 {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+
+.opt1 {
+    content: url("../images/million.png");
+    position: absolute;
+    top: 35%;
+    left: 50%;
+}
+
+
+.opt2 {
+    content: url("../images/million.png");
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
+
+.opt1-t , .opt2-t , .week1res , .week2res{
+    position: absolute;
+    content: '';
+    height: 1px;
+    padding: 1px;
+    pointer-events: none;
+}
+
+.opt1-t{
+    top: 35%;
+    left: 53%;
+}
+
+.opt2-t{
+    top: 35%;
+    left: 23%;
+}
+
+.week1res{
+    top: 45%;
+    left: 51%;
+}
+
+.week2res{
+    top: 45%;
+    left: 21%;
+}
+
+
+
+
+.opt1:hover , .opt2:hover{
+    cursor: pointer;
+    content: url("../images/million\ -\ hover.png");
+}
+
+@media only screen and (max-device-width: 480px) {
+    .opt1 , .opt2 {
+        width: 40vh;
+        left: 10%;
+    }
+
+    
+    .opt1{
+        top: 35%;
+    }
+
+    .opt1-t{
+        top: 36%;
+        left: 27%;
+    }
+    
+    .opt2{
+        top: 55%;
+    
+    }
+
+    .opt2-t{
+        top: 56%;
+        left: 27%;
+    }
+
+    .week1res{
+        top: 28%;
+        left: 40%;
+        font-size: 3vh;
+    }
+    
+    .week2res{
+        top: 48%;
+        left: 40%;
+        font-size: 3vh;
+    }
+
+}
