@@ -81,9 +81,8 @@ h1 {
     }
 
     h1{
-        font-size: 10px;
+        font-size: 100%;
     }
-    
     .opt1{
         top: 35%;
     }
@@ -91,6 +90,7 @@ h1 {
     .opt1-t{
         top: 36%;
         left: 27%;
+        font-size: 100%;
     }
     
     .opt2{
@@ -101,18 +101,19 @@ h1 {
     .opt2-t{
         top: 56%;
         left: 27%;
+        font-size: 100%;
     }
 
     .week1res{
         top: 28%;
         left: 40%;
-        font-size: 3vh;
+        font-size: 2vh;
     }
     
     .week2res{
         top: 48%;
         left: 40%;
-        font-size: 3vh;
+        font-size: 2vh;
     }
 
 }
