@@ -144,12 +144,12 @@ body {
 
     .q-t{
         left: 17%;
-        font-size: 2vh;
+        font-size: 1vh;
     }
 
     .opt1-t , .opt2-t , .opt3-t , .opt4-t{
         left: 30%;
-        font-size: 4vh;
+        font-size: 3vh;
     }
     
     .q , .q-t{
