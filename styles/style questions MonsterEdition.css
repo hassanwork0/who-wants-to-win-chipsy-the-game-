@@ -13,7 +13,7 @@ body {
 
 .logo {
     float: right;
-    width: 25%;
+    width: 20%;
 }
 
 .hello {
@@ -141,7 +141,12 @@ body {
         left: 30%;
     }
 @media only screen and (max-device-width: 480px) {
-
+    .logo{
+        width: 25%;
+    }
+    .monster{
+        left:75%;
+    }
     .q ,.opt1 , .opt2 , .opt3 , .opt4 {
         width: 40vh;
         left: 10%;
