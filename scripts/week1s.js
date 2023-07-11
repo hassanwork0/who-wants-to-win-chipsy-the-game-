@@ -74,12 +74,15 @@ var week1ans = 0; //1,2,3,4
 var week1p = 0;
 var week1b = true;
 
+var hover = true;
+
 function week1imp() {
     if (week1arr[week1]) {
 
         document.getElementById("q").innerHTML = week1arr[week1];
 
         week1b = true;
+        hover = true;
         for (let i = 1; i < 5; ++i) {
             document.getElementById("opt" + i).src = "../images/million.png";
             if (week1arr[++week1].includes("*")) {
@@ -102,7 +105,17 @@ function gotoMainPage(){
     location.replace("../index.html");
 }
 
-function test(opt) {
+function test(opt){
+    if(hover == true){
+        hover = false;
+    document.getElementById("opt" + opt).src = "../images/million\ -\ hover.png";
+    setTimeout(check,500,opt);
+    }else{
+        return;
+    }
+}
+
+function check(opt) {
     if (week1b == true) {
 
         if (opt != week1ans) {

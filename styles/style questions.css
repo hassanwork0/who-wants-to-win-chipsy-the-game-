@@ -90,11 +90,6 @@ body {
     pointer-events: none;
 }
 
-.opt1:hover , .opt2:hover , .opt3:hover , .opt4:hover {
-    cursor: pointer;
-    content: url("../images/million\ -\ hover.png");
-}
-
 .phone{
     display: none;  
 }
@@ -134,7 +129,13 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     
-
+    @media only screen and (min-device-width: 480px) {
+        .opt1:hover , .opt2:hover , .opt3:hover , .opt4:hover {
+            cursor: pointer;
+            content: url("../images/million\ -\ hover.png");
+        }
+    }
+    
 @media only screen and (max-device-width: 480px) {
 
     .q ,.opt1 , .opt2 , .opt3 , .opt4 {
