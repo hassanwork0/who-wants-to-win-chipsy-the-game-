@@ -9,35 +9,40 @@
 
     <link rel="stylesheet" href="styles/style.css">
     <script>
-        function res(){
-    if(window.localStorage.getItem("week1res"))
-    document.getElementById("week1res").innerHTML += window.localStorage.getItem("week1res");
-    else
-    document.getElementById("week1res").innerHTML += 0;
+        let weeks = 3;
 
-    if(window.localStorage.getItem("week2res"))
-    document.getElementById("week2res").innerHTML += window.localStorage.getItem("week2res");
-    else
-    document.getElementById("week2res").innerHTML += 0;
-}
+        function res() {
+            for (let i = 1; i <= weeks; i++) {
+                if (window.localStorage.getItem("week" + i + "res"))
+                    document.getElementById("week" + i + "res").innerHTML += window.localStorage.getItem("week" + i + "res");
+                else
+                    document.getElementById("week" + i + "res").innerHTML += 0;
+            }
+
+        }
     </script>
 </head>
 
 <body onload="res()">
-    <img src = "images/من سيربح كيس الشيبسي.png" class="logo">
+    <img src="images/من سيربح كيس الشيبسي.png" class="logo">
     <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
 
-<div class = "cont">
+    <div class="cont">
 
         <a href="weeks/week 1.html"><img alt="button" class="opt1"></a>
         <h1 class="opt1-t">اسئلة السطح الاول</h1>
 
-        <a href = "weeks/week 2.html"><img  alt="button" class="opt2"></a>
+        <a href="weeks/week 2.html"><img alt="button" class="opt2"></a>
         <h1 class="opt2-t">اسئلة السطح الثاني</h1>
 
+        <a href="weeks/week 3.html"><img alt="button" class="opt3"></a>
+        <h1 class="opt3-t">اسئلة السطح الثالث</h1>
+
         <h1 class="week1res" id="week1res">درجة السطح الاول:</h1>
-    <h1 class="week2res" id="week2res">درجة السطح الثاني:</h1>
-</div>
+        <h1 class="week2res" id="week2res">درجة السطح الثاني:</h1>
+        <h1 class="week3res" id="week3res">درجة السطح الثالث:</h1>
+
+    </div>
 
 </body>
 
