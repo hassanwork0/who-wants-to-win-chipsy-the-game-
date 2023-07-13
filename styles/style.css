@@ -31,7 +31,6 @@ body {
     left: 50%;
 }
 
-
 .opt2 {
     content: url("../images/million.png");
     position: absolute;
@@ -46,7 +45,7 @@ body {
     left: 35%;
 }
 
-.opt1-t , .opt2-t , .week1res , .week2res , .opt3-t , .week3res{
+.opt1-t , .opt2-t , .week1res , .week2res , .opt3-t , .week3res , .weekopt-t{
     position: absolute;
     content: '';
     height: 1px;
@@ -84,10 +83,18 @@ body {
     left: 37%;
 }
 
+.weekopt{
+    content: url("../images/million.png");
+    position: absolute;
+    top: 2%;
+}
+.weekopt-t{
+    position: absolute;
+    top: 0%;
+    left: 5%;
+}
 
-
-
-.opt1:hover , .opt2:hover{
+.opt1:hover , .opt2:hover , .weekopt:hover{ 
     cursor: pointer;
     content: url("../images/million\ -\ hover.png");
 }
@@ -157,5 +164,21 @@ body {
         left: 40%;
         font-size: 100%;
     }
+
+    .weekopt{
+        width: 50%;
+        top: 15%;
+        left: 25%;
+
+
+    }
+
+    .weekopt-t{
+        top: 13%;
+        left: 36%;
+        font-size: 150%;
+    }
+
+    
 
 }
