@@ -1,8 +1,31 @@
 html{
-    background-image: url("simple.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-
+    color: whitesmoke;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.game{
+    display: block;
+    width: 100vh;
+    height: 70vh;
+    margin: 10% auto;
+}
+
+
+@media only screen and (max-device-width: 900px) {
+    .game{
+        width: 160vh;
+        height: 100vh;
+        margin: 10% auto;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    .game{
+        width: 50vh;
+        height: 70vh;
+        margin: 10% auto;
+    }
 }
