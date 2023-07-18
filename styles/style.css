@@ -23,6 +23,19 @@ body {
     padding: 10px;
 }
 
+.flash{
+    content: url("../images/million.png");
+    position: absolute;
+    top: 85%;
+    left: 35%;
+}
+
+.flash-t{
+    position: absolute;
+    top: 83%;
+    left: 38%;
+    pointer-events: none;
+}
 
 .opt1 {
     content: url("../images/million.png");
