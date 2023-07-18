@@ -107,7 +107,7 @@ body {
     left: 5%;
 }
 
-.opt1:hover , .opt2:hover , .weekopt:hover{ 
+.opt1:hover , .opt2:hover , .weekopt:hover , .flash:hover{ 
     cursor: pointer;
     content: url("../images/million\ -\ hover.png");
 }
