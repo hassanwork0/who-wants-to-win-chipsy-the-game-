@@ -182,8 +182,6 @@ body {
         width: 60%;
         top: 15%;
         left: 25%;
-
-
     }
 
     .weekopt-t{
@@ -192,6 +190,16 @@ body {
         font-size: 140%;
     }
 
+    .flash{
+        width: 60%;
+        left: 25%;
+    }
+
+    .flash-t{
+        top: 84%;
+        left: 36%;
+        font-size: 140%;
+    }
     
 
 }
