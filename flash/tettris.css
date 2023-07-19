@@ -8,15 +8,24 @@ html{
 }
 .game{
     display: block;
-    width: 120vh;
-    height: 90vh;
-    margin: 2% auto;
+    width: 100vh;
+    height: 70vh;
+    margin: 10% auto;
 }
 
 .title{
     text-align: center;
 }
 
+
+.controls{
+    display: none;
+}
+
+img{
+    margin-left: 25px;
+    width: 15%;
+}
 @media only screen and (max-device-width: 900px) {
     .game{
         width: 160vh;
@@ -30,5 +39,13 @@ html{
         width: 50vh;
         height: 70vh;
         margin: 10% auto;
+    }
+
+    .controls{
+        display: block;
+        position: absolute;
+        top: 60%;
+
+        
     }
 }
