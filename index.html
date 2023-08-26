@@ -20,6 +20,10 @@
             }
 
         }
+
+        function remove(){
+            document.getElementById("pop").style.display = "none";
+        }
     </script>
     <audio autoplay loop>
         <source src="audio/main.mp3" type="audio/mpeg">
@@ -51,10 +55,16 @@
 
         <a href="flash/game.html"><img alt="button" class="flash"></a>
         <h1 class="flash-t">العاب فلاش تجريبية</h1>
-
-
     </div>
-
+    <div class="popup" id="pop">
+        <img src="images/من سيربح كيس الشيبسي.png" alt="logo" class="pimg">
+        <h2>تحديث للموقع</h2>
+        <p id="totalp">هيتم اعادة بناء الموقع مرة تانية مع تحسين الشكل</p>
+        <p id="totalp">لو حابب تضيف اي تعليق تقدر تبعتها هنا </p>
+        <a href="https://forms.gle/YEUG7aBxkPRk74Rv5" target="_blank"><p id="totalp">ضيف تعليق للموقع</p></a>
+                <button onclick="remove()">استمر</button>
+    </div>
+    
 </body>
 
 </html>
