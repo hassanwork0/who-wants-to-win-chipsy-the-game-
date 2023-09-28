@@ -12,12 +12,17 @@ h1{
 }
 
 .logo {
+    position: absolute;
+    left: 75%;
+    top: 0%;
     float: right;
     width: 25%;
 }
 
 .title{
     position: absolute;
+    left: 0%;
+    top: 0%;
     left: 30%;
     width: 50%;
     padding: 10px;
@@ -99,8 +104,10 @@ h1{
 .weekopt{
     content: url("../images/million.png");
     position: absolute;
+    left: 1%;
     top: 2%;
 }
+
 .weekopt-t{
     position: absolute;
     top: 0.5%;
@@ -145,10 +152,52 @@ h1{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
     
+    .cont{    
+        display: inline-flex;
+        height: 100vh;
+        width: 140vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -100;
+    
+    }
+
+    .box1 {
+        width:25%;
+    }
+     .box2 {
+        width:25%;
+    }
+     .box3 {
+        width:25%;
+    }
+     .box4{
+        width:25%;
+    }
+
+    .chips{
+        animation: example 1s linear forwards;
+    }
+      
+      @keyframes example {
+        0%{
+            transform: translateY(-200px);
+        }
+    
+        100%{
+            transform: translateY(90vh);
+            display: none;
+        }
+    }
+    
 
 @media only screen and (max-device-width: 480px) {
     .logo{
         float: left;
+        position: absolute;
+        top: 1%;
+        left: 1%;
     }
     .opt1 , .opt2 , .opt3{
         width: 40vh;
@@ -157,6 +206,9 @@ h1{
 
     h1{
         font-size: 100%;
+        position: absolute;
+        top: 1%;
+        left: 1%;
     }
     .opt1{
         top: 35%;
@@ -165,7 +217,7 @@ h1{
     .opt1-t{
         top: 35%;
         left: 27%;
-        font-size: 150%;
+        font-size: 120%;
     }
     
     .opt2{
@@ -176,7 +228,7 @@ h1{
     .opt2-t{
         top: 55%;
         left: 27%;
-        font-size: 150%;
+        font-size: 120%;
     }
 
     .opt3{
@@ -186,31 +238,32 @@ h1{
     .opt3-t{
         top: 75%;
         left: 27%;
-        font-size: 150%;
+        font-size: 120%;
     }
 
     .week1res{
         top: 28%;
         left: 40%;
-        font-size: 100%;
+        font-size: 120%;
     }
     
     .week2res{
         top: 48%;
         left: 40%;
-        font-size: 100%;
+        font-size: 120%;
     }
 
     .week3res{
         top: 68%;
         left: 40%;
-        font-size: 100%;
+        font-size: 120%;
     }
 
     .weekopt{
         width: 60%;
-        top: 15%;
+        top: 16%;
         left: 25%;
+        font-size: 120%;
     }
 
     .weekopt-t{
@@ -227,7 +280,23 @@ h1{
     .flash-t{
         top: 84%;
         left: 36%;
-        font-size: 150%;
+        font-size: 120%;
+    }
+
+    .chips{
+        animation: example 1s linear forwards;
+    }
+      
+      @keyframes example {
+        0%{
+            transform: translateY(-200px);
+        }
+    
+        100%{
+            transform: translateY(100vh);
+            display: none;
+
+        }
     }
     
 

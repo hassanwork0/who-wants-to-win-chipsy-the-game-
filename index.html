@@ -18,24 +18,63 @@
                 else
                     document.getElementById("week" + i + "res").innerHTML += 0;
             }
-
+            rain();
         }
 
         function remove(){
             document.getElementById("pop").style.display = "none";
         }
+
+        function rain() {
+            let amount = 15;
+            let i = 0;
+            let time = 50;
+
+            let box1 = document.getElementById("1");
+            let box2 = document.getElementById("2");
+            let box3 = document.getElementById("3");
+            let box4 = document.getElementById("4");
+            
+            while(i < amount){
+            setTimeout(function(){
+                let random = Math.floor(Math.random() * 4) + 1;
+                let drop = document.createElement('img');
+                drop.src = "images/img.png";
+                drop.className="chips";
+                let size = 75;
+                drop.style.width = size + 'px';
+
+                switch (random) {
+                    case 1:
+                        box1.appendChild(drop);
+                        break;
+                    case 2:
+                        box2.appendChild(drop);
+                        break;
+                    case 3:
+                        box3.appendChild(drop);
+                        break;
+                    case 4:
+                        box4.appendChild(drop);
+                        break;
+                }},time+=100);
+            ++i;
+            }
+        }
     </script>
-    <audio autoplay loop>
-        <source src="audio/main.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
 </head>
 
 <body onload="res()">
+    <div class="cont">
+        <div class="box1" id="1"></div>
+        <div class="box2" id="2"></div>
+        <div class="box3" id="3"></div>
+        <div class="box4" id="4"></div>
+</div>
+
     <img src="images/من سيربح كيس الشيبسي.png" class="logo">
     <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
 
-    <div class="cont">
 
         <a href="weeks/week 1.html"><img alt="button" class="opt1"></a>
         <h1 class="opt1-t">اسئلة السطح الاول</h1>
