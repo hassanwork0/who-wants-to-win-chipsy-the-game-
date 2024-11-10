@@ -89,6 +89,7 @@ body {
 /*--------------------phone style--------------------------------------*/
 
 @media only screen and (max-device-width: 480px) {
+
     .logo{
         width: 35%;
     }
@@ -96,8 +97,8 @@ body {
         display: none;
     }
     .weeksbtns {
-        grid-template-columns: repeat(2, 1fr);   
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
         gap: 1px;  
         margin-top: 4%;
     }
@@ -109,6 +110,20 @@ body {
     .opt-t {
         font-size: 3vh;
     }
+
+    #one{
+        grid-row: 1;
+    }
+    #two{
+        grid-row: 2;
+    }
+    #three{
+        grid-row: 3;
+    }
+    #four{
+        grid-row: 4;
+    }
+
     
     .weekres{
         top: 28%;
@@ -123,8 +138,5 @@ body {
         left: 25%;
         font-size: 120%;
     }
-
- 
-
 
 }
