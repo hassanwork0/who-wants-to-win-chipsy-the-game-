@@ -23,6 +23,7 @@ body {
 }
 
 .weeksbtns {
+    padding-top: 5vh;
     width: fit-content;
     display: grid;              
     grid-template-columns: repeat(2, 1fr);   
@@ -89,7 +90,9 @@ body {
 /*--------------------phone style--------------------------------------*/
 
 @media only screen and (max-device-width: 480px) {
-
+    #flash{
+        top:99%;
+    }
     .logo{
         width: 35%;
     }
