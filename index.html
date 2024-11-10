@@ -9,101 +9,85 @@
 
     <link rel="stylesheet" href="styles/style.css">
     <script>
-        let weeks = 3;
+        weeks = 4;
+        function go_to(week){
+            localStorage.setItem("week",week);
+            location.replace("weeks/week.html");
+        }
 
-        function res() {
+        function loadScore(){
             for (let i = 1; i <= weeks; i++) {
-                if (window.localStorage.getItem("week" + i + "res"))
-                    document.getElementById("week" + i + "res").innerHTML += window.localStorage.getItem("week" + i + "res");
-                else
-                    document.getElementById("week" + i + "res").innerHTML += 0;
+                if(localStorage.getItem(i)){
+                document.getElementById("week"+i+"res").innerHTML +=
+                localStorage.getItem(i);
+                }else{
+                document.getElementById("week"+i+"res").innerHTML+=0;
             }
-            rain();
         }
-
-        function remove(){
-            document.getElementById("pop").style.display = "none";
-        }
-
-        function rain() {
-            let amount = 15;
-            let i = 0;
-            let time = 50;
-
-            let box1 = document.getElementById("1");
-            let box2 = document.getElementById("2");
-            let box3 = document.getElementById("3");
-            let box4 = document.getElementById("4");
-            
-            while(i < amount){
-            setTimeout(function(){
-                let random = Math.floor(Math.random() * 4) + 1;
-                let drop = document.createElement('img');
-                drop.src = "images/img.png";
-                drop.className="chips";
-                let size = 75;
-                drop.style.width = size + 'px';
-
-                switch (random) {
-                    case 1:
-                        box1.appendChild(drop);
-                        break;
-                    case 2:
-                        box2.appendChild(drop);
-                        break;
-                    case 3:
-                        box3.appendChild(drop);
-                        break;
-                    case 4:
-                        box4.appendChild(drop);
-                        break;
-                }},time+=100);
-            ++i;
-            }
         }
     </script>
 </head>
 
-<body onload="res()">
-    <div class="cont">
-        <div class="box1" id="1"></div>
-        <div class="box2" id="2"></div>
-        <div class="box3" id="3"></div>
-        <div class="box4" id="4"></div>
-</div>
+<body onload="loadScore()">
 
-    <img src="images/من سيربح كيس الشيبسي.png" class="logo">
-    <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
-
-
-        <a href="weeks/week 1.html"><img alt="button" class="opt1"></a>
-        <h1 class="opt1-t">اسئلة السطح الاول</h1>
-
-        <a href="weeks/week 2.html"><img alt="button" class="opt2"></a>
-        <h1 class="opt2-t">اسئلة السطح الثاني</h1>
-
-        <a href="weeks/week 3.html"><img alt="button" class="opt3"></a>
-        <h1 class="opt3-t">اسئلة السطح الثالث</h1>
-
-        <h1 class="week1res" id="week1res">درجة السطح الاول:</h1>
-        <h1 class="week2res" id="week2res">درجة السطح الثاني:</h1>
-        <h1 class="week3res" id="week3res">درجة السطح الثالث:</h1>
-
-        <a href="weeks/weekq.html"><img alt="button" class="weekopt"></a>
-        <h1 class="weekopt-t">سؤال الاسبوع</h1>
-
-        <a href="flash/game.html"><img alt="button" class="flash"></a>
-        <h1 class="flash-t">العاب فلاش تجريبية</h1>
+    <div class="titlebar">
+        <div class="weekcont">
+            <div class="weekbtn">
+                <div class="opt">
+                    <h1 class="opt-t">سؤال الاسبوع</h1>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
+        <img src="images/من سيربح كيس الشيبسي.png" class="logo">
     </div>
-    <div class="popup" id="pop">
-        <img src="images/من سيربح كيس الشيبسي.png" alt="logo" class="pimg">
-        <h2>تحديث للموقع</h2>
-        <p id="totalp">هيتم اعادة بناء الموقع مرة تانية مع تحسين الشكل</p>
-        <p id="totalp">لو حابب تضيف اي تعليق تقدر تبعتها هنا </p>
-        <a href="https://forms.gle/YEUG7aBxkPRk74Rv5" target="_blank"><p id="totalp">ضيف تعليق للموقع</p></a>
-                <button onclick="remove()">استمر</button>
+
+    <div class="weeksbtns">
+        <div class="weekcont">
+            <div class="weekbtn">
+                <div class="opt" onclick="go_to(2)">
+                    <h1 class="opt-t">اسئلة السطح الثاني</h1>
+                </div>
+            </div>
+            <h1 class="weekres" id="week2res">درجة السطح الثاني:</h1>
+        </div>
+
+        <div class="weekcont">
+            <div class="weekbtn">
+                <div class="opt" onclick="go_to(1)">
+                    <h1 class="opt-t">اسئلة السطح الاول</h1>
+                </div>
+            </div>
+            <h1 class="weekres" id="week1res">درجة السطح الاول:</h1>
+        </div>
+        
+        <div class="weekcont">
+            <div class="weekbtn">
+                <div class="opt" onclick="go_to(4)">
+                    <h1 class="opt-t">اسئلة السطح الرابع</h1>
+                </div>
+            </div>
+            <h1 class="weekres" id="week4res">درجة السطح الرابع:</h1>
+        </div>
+        
+        <div class="weekcont">
+            <div class="weekbtn" onclick="go_to(3)">
+                <div class="opt" id="week3">
+                    <h1 class="opt-t">اسئلة السطح الثالث</h1>
+                </div>
+            </div>
+            <h1 class="weekres" id="week3res">درجة السطح الثالث:</h1>
+        </div>
+        
+
     </div>
-    
+
+    <div class="weekcont" id="flash">
+        <div class="weekbtn">
+            <a href="flash/game.html" class="opt">
+                <h1 class="opt-t">flash games</h1>
+            </a>
+        </div>
 </body>
 
 </html>

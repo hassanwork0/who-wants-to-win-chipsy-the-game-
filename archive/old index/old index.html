@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من سيربح كيس الشيبسي</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script>
+        let weeks = 4;
+
+        function res() {
+            for (let i = 1; i <= weeks; i++) {
+                if (window.localStorage.getItem("week" + i + "res"))
+                    document.getElementById("week" + i + "res").innerHTML += window.localStorage.getItem("week" + i + "res");
+                else
+                    document.getElementById("week" + i + "res").innerHTML += 0;
+            }
+            rain();
+        }
+
+        function remove() {
+            document.getElementById("pop").style.display = "none";
+        }
+
+        function rain() {
+            let amount = 15;
+            let i = 0;
+            let time = 50;
+
+            let box1 = document.getElementById("1");
+            let box2 = document.getElementById("2");
+            let box3 = document.getElementById("3");
+            let box4 = document.getElementById("4");
+
+            while (i < amount) {
+                setTimeout(function () {
+                    let random = Math.floor(Math.random() * 4) + 1;
+                    let drop = document.createElement('img');
+                    drop.src = "images/img.png";
+                    drop.className = "chips";
+                    let size = 75;
+                    drop.style.width = size + 'px';
+
+                    switch (random) {
+                        case 1:
+                            box1.appendChild(drop);
+                            break;
+                        case 2:
+                            box2.appendChild(drop);
+                            break;
+                        case 3:
+                            box3.appendChild(drop);
+                            break;
+                        case 4:
+                            box4.appendChild(drop);
+                            break;
+                    }
+                }, time += 100);
+                ++i;
+            }
+        }
+    </script>
+</head>
+
+<body onload="res()">
+    <div class="cont">
+        <div class="box1" id="1"></div>
+        <div class="box2" id="2"></div>
+        <div class="box3" id="3"></div>
+        <div class="box4" id="4"></div>
+    </div>
+
+    <div class="titlebar">
+        <img src="images/من سيربح كيس الشيبسي.png" class="logo">
+        <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
+    </div>
+
+    <div class="weekcont">
+        <div class="weekbtn">
+            <a href="weeks/week 1.html"><img alt="button" class="opt1"></a>
+            <h1 class="opt1-t">اسئلة السطح الاول</h1>
+        </div>
+        <h1 class="week1res" id="week1res">درجة السطح الاول:</h1>
+
+    </div>
+
+    <div class="weeksbtns">
+        <div class="weekcont">
+            <div class="weekbtn">
+                <a href="weeks/week 2.html" class="opt2">
+                    <h1 class="opt2-t">اسئلة السطح الثاني</h1>
+                </a>
+            </div>
+            <h1 class="week2res" id="week2res">درجة السطح الثاني:</h1>
+        </div>
+
+        <div class="weekcont">
+            <div class="weekbtn">
+                <a href="weeks/week 3.html"><img alt="button" class="opt3"></a>
+                <h1 class="opt3-t">اسئلة السطح الثالث</h1>
+            </div>
+            <h1 class="week3res" id="week3res">درجة السطح الثالث:</h1>
+        </div>
+
+        <div class="weekcont">
+            <div class="weekbtn">
+                <a href="weeks/week 4.html"><img alt="button" class="opt3"></a>
+                <h1 class="opt4-t">اسئلة السطح الرابع</h1>
+            </div>
+            <h1 class="week4res" id="week4res">درجة السطح الرابع:</h1>
+        </div>
+    </div>
+
+    <!-- 
+    <a href="weeks/weekq.html"><img alt="button" class="weekopt"></a>
+    <h1 class="weekopt-t">سؤال الاسبوع</h1>
+
+    <a href="flash/game.html"><img alt="button" class="flash"></a>
+    <h1 class="flash-t">العاب فلاش تجريبية</h1>
+    </div> -->
+
+    <!--     
+    <div class="popup" id="pop">
+        <img src="images/من سيربح كيس الشيبسي.png" alt="logo" class="pimg">
+        <h2>تحديث للموقع</h2>
+        <p id="totalp">هيتم اعادة بناء الموقع مرة تانية مع تحسين الشكل</p>
+        <p id="totalp">لو حابب تضيف اي تعليق تقدر تبعتها هنا </p>
+        <a href="https://forms.gle/YEUG7aBxkPRk74Rv5" target="_blank">
+            <p id="totalp">ضيف تعليق للموقع</p>
+        </a>
+        <button onclick="remove()">استمر</button>
+    </div> -->
+
+</body>
+
+</html>
