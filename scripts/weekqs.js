@@ -281,7 +281,7 @@ function weekimp() {
 
         document.getElementById("q").innerHTML = weekarr[week];
         if (window.innerWidth < 450) {
-            document.getElementById("ques").style.marginBottom = '20vh';
+            document.getElementById("ques").style.marginBottom = '7vh';
             var textElement = weekarr[week];
             var textLength = textElement.length; // only works if textElement is a string
             // Calculate font size based on the length of the text
