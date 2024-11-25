@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من سيربح كيس الشيبسي</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/input.css">
+    <script>
+        function startGame() {
+            let found = false;
+
+            let games = {
+                69: "bira",
+                "Counter Strike": "fps",
+                "war": "ageofwar",
+                "minecraft": "minecraft",
+                "game": "game",
+                "football": "kora",
+                "subway": "subway",
+                "tettris": "tettris"
+            };
+
+            const game = document.getElementById("game");
+
+            // Get the input value
+            const gameValue = game.value.toLowerCase();
+
+            var goGame = "";
+            // Iterate through the keys of the `games` object
+            for (const key of Object.keys(games)) {
+                if (key.toLowerCase().includes(gameValue)) {
+                    goGame = games[key]; 
+                    found = true;
+                    break;
+                }
+            }
+
+            if(found){
+                location.href = "../flash/"+goGame+".html";
+            }else{
+                game.value = "No Such Game";
+            }
+
+
+            // switch (game) {
+            //     case 1:
+            //         location.href = "../flash/games.html";
+            //         break;
+
+            //     default:
+            //         alert("wrong id");
+            // }
+        }
+
+        function back() {
+            location.href = "../index.html";
+        }
+    </script>
+</head>
+
+<body onload="loadScore()">
+
+    <div class="titlebar">
+        <div class="weekcont">
+            <div class="weekbtn">
+                <div class="opt" onclick="back()">
+                    <h1 class="opt-t">الرائيسية</h1>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
+        <img src="../images/من سيربح كيس الشيبسي.png" class="logo">
+    </div>
+
+
+    <div class="super-container">
+        <div class="container">
+            <div class="input">
+                <div class="input-box">
+                    <input type="text" id="game" placeholder="Enter Game Code" class="input-field">
+                </div>
+                <div onclick="startGame()" class="input-button">
+                    <h1 class="input-text">Search For Game</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -11,6 +11,11 @@ body {
     overflow: hidden;
 
     color: whitesmoke;
+
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .titlebar {
@@ -51,12 +56,12 @@ body {
         font-weight: bold;
         text-align: center; /* Center the text */
         z-index: 1; /* Ensure the text is above the image */
+    
     }
 
 .supercont{
     width: 100%;
     height: 20vh;
-    align-items: center;
     justify-content: center;
     display: flex;
     margin-top: 5vh;
@@ -90,13 +95,8 @@ body {
     color: whitesmoke;
     font-size: 4vh;
     font-weight: bold;
+    text-align: center;
 }
-
-.opt:hover {
-    cursor: pointer;
-    background-image: url("../images/million - hover.png");
-}
-
 
 .popup{
     display: none;

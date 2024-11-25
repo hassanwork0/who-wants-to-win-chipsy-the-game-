@@ -1,0 +1,65 @@
+.input {
+    width: 100%;
+
+}
+
+.input-box {
+    background-image: url("../images/million.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%; /* Adjust width as needed */
+    height: 10vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field {
+    width: 100%; /* Fill the input box width */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 2vh;
+    text-align: center;
+    background-color: transparent; /* Remove white background */
+    color: whitesmoke; /* Text color */
+}
+
+.input-button {
+    background-image: url("../images/million.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%; /* Smaller button width */
+    height: 8vh; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 5vh;
+    margin-top: 5vh;
+}
+
+.input-button:hover {
+    background-image: url("../images/million - hover.png"); /* Change image on hover */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.super-container{
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    
+}
+
+.input-text{
+    font-size: 2vh;
+}

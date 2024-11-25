@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من سيربح كيس الشيبسي</title>
+
+    <link rel="stylesheet" href="../styles/browse.css">
+</head>
+
+<body onload="loadScore()">
+
+    <div class="titlebar">
+        <div class="weekcont">
+
+        </div>
+        <h1 class="title">اهلا و مرحبا بكم في لعبة من سيربح كيس الشيبسي</h1>
+        <img src="../images/من سيربح كيس الشيبسي.png" class="logo">
+    </div>
+
+    <!--------------------------------START WEEKS -------------------------------->
+        
+    <table class="weeksbtns" id="weeksTable" style="width: 100%; text-align: center; border-collapse: collapse;">
+        <!-- Dynamic content will be added by JavaScript -->
+    </table>
+    
+
+    <!--------------------------------END WEEKS -------------------------------->
+    <script>
+        const data = [
+    "week1",
+    "week2",
+    "special week",
+    "halloween week",
+    "food week",
+    "countries week",
+    "sports week",
+    "week 3",
+    "week 3 part 2",
+    "week 0",
+    "week1",
+    "week2",
+    "special week",
+    "halloween week",
+    "food week",
+    "countries week",
+    "sports week",
+    "week 3",
+    "week 3 part 2",
+    "week 0",
+    "week1",
+    "week2",
+    "special week",
+    "halloween week",
+    "food week",
+    "countries week",
+    "sports week",
+    "week 3",
+    "week 3 part 2",
+    "week 0",
+    "week1",
+    "week2",
+    "special week",
+    "halloween week",
+    "food week",
+    "countries week",
+    "sports week",
+    "week 3",
+    "week 3 part 2",
+    "week 0",
+];
+
+const weeksTable = document.getElementById("weeksTable");
+const columns = 3; // Number of columns per row
+let row;
+
+data.forEach((week, index) => {
+    if (index % columns === 0) {
+        // Create a new row after every 'columns' items
+        row = weeksTable.insertRow();
+    }
+
+    const cell = row.insertCell();
+    cell.className = "weekcell";
+    cell.innerHTML = `
+        <div class="opt" onclick="go_to(${index + 1})">
+            <h1 class="opt-t">${week}</h1>
+        </div>
+    `;
+});
+
+    </script>    
+</body>
+
+</html>

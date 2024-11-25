@@ -1,0 +1,79 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+    color: whitesmoke;
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 4vh;
+}
+
+.logo{
+    width: 15%;
+}
+
+.weeksbtns {
+    width: 100%;
+    margin-top: 10px; /* Space below the title */
+    display: table;
+    table-layout: fixed; /* Ensure cells have equal width */
+    border-collapse: collapse;
+}
+
+.weekcell {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.opt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/million.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    width: 80%; /* Reduce size for better spacing */
+    margin: 0 auto; /* Center within the cell */
+}
+
+.opt-t {
+    color: whitesmoke;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.opt:hover {
+    cursor: pointer;
+    background-image: url("../images/million - hover.png");
+}
+
+body {
+    overflow-y: auto; /* Enable scrolling for long content */
+}
+
+/*--------------------phone style--------------------------------------*/
+@media only screen and (max-device-width: 480px) {
+    .opt {
+        display: block;
+        width: 90%; 
+    }
+
+    .opt-t {
+        font-size: 2vh;
+    }
+}
