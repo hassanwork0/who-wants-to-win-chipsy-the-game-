@@ -28,7 +28,6 @@
 
             // Get the input value
             const gameValue = game.value.toLowerCase();
-
             var goGame = "";
             // Iterate through the keys of the `games` object
             for (const key of Object.keys(games)) {
@@ -40,7 +39,11 @@
             }
 
             if(found){
+                if(goGame == games[3]){
+                    location.href = "https://eaglercraft.com/mc/1.8.8/";
+                }else{
                 location.href = "../flash/"+goGame+".html";
+                }
             }else{
                 game.value = "No Such Game";
             }
@@ -68,7 +71,7 @@
         <div class="weekcont">
             <div class="weekbtn">
                 <div class="opt" onclick="back()">
-                    <h1 class="opt-t">الرائيسية</h1>
+                    <h1 class="opt-t">الرئيسية</h1>
                 </div>
             </div>
         </div>
